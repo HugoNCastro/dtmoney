@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  :root {
+  /* :root {
     --background: #f0f2f5;
     --red: #e52e4d;
     --blue: #5429CC;
@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 
     --shape: #ffffff;
   }
-  
+   */
   * {
     margin: 0;
     padding: 0;
@@ -42,7 +42,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body { 
-    background-color: var(--background);
+    //background-color: var(--background);
+    background: ${props => props.theme.colors.background};
     -webkit-font-smoothing: antialiased;
   }
 
@@ -69,7 +70,8 @@ export const GlobalStyle = createGlobalStyle`
   .react-modal-content{
     width: 100%;
     max-width: 576px;
-    background: var(--background);
+    //background: var(--background);
+    background: ${props => props.theme.colors.background};
     padding: 3rem;
     position: relative;
     border-radius: 0.25rem;

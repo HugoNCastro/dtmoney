@@ -7,7 +7,8 @@ export const Container = styled.div`
     border-spacing: 0 0.5rem;
 
     th { 
-      color: var(--text-body);
+      //color: var(--text-body);
+      color: ${props => props.theme.colors.textBody};
       font-weight: 400;
       padding: 1rem 2rem;
       text-align: left;
@@ -16,18 +17,23 @@ export const Container = styled.div`
     td { 
       padding: 1rem 2rem;
       border: 0;
-      background: var(--shape);
-      color: var(--text-body);
-      border-radius: 0.25rem;
+      //background: var(--shape);
+      background: ${props => props.theme.colors.shape};
+      //color: var(--text-body);
+      color: ${props => props.theme.colors.textBody};
+      //border-radius: 0.2rem;
 
       &:first-child {
-        color: var(--text-title);
+        //color: var(--text-title);
+        color: ${props => props.theme.colors.textTitle};
       }
       &.deposit {
-        color: var(--green);
+        //color: var(--green);
+        color: ${props => props.theme.colors.green};
       }
       &.withdraw {
-        color: var(--red);
+        //color: var(--red);
+        color: ${props => props.theme.colors.red};
       }
     }
   }

@@ -1,7 +1,17 @@
 import styled from "styled-components"; 
+import { darken } from "polished";
 
 export const Container = styled.header`
-  background: var(--blue);
+  //background: var(--blue);
+  background: ${props => props.theme.colors.primary};
+  div {
+    display: flex;
+    align-items: center;
+    color: ${props => darken(0.5, props.theme.colors.textBody)};
+  }
+  p {
+    margin: 1rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -15,8 +25,10 @@ export const Content = styled.div`
 
   button { 
     font-size: 1rem;
-    color: #fff;
-    background: var(--blue-light);
+    //color: #fff;
+    //background: var(--blue-light);
+    background: ${props => props.theme.colors.secundary};
+    color: ${props => props.theme.colors.shape};
     border: 0;
     padding: 0 2rem;
     border-radius: 0.25rem;
