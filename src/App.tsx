@@ -8,6 +8,7 @@ import { ThemeProvider, DefaultTheme } from 'styled-components';
 import usePerisitedState from './utils/usePerisitedState';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
+import { TransactionsProvider } from "./hooks/useTransactions";
 
 Modal.setAppElement("#root");
 
@@ -29,7 +30,7 @@ export function App() {
     setIsNewTransactionModalOpen(false)
   }
   return (
-    <>
+    <TransactionsProvider>
       <ThemeProvider theme={theme} >
         <Header 
           onOpenNewTransactionModal={handleOpenNewTransactionModal} 
@@ -42,7 +43,7 @@ export function App() {
         />
         <GlobalStyle />
       </ThemeProvider>
-    </>
+    </TransactionsProvider>
   );
 }
 
